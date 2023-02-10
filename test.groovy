@@ -34,4 +34,13 @@ class PluginCheck {
 
 def pluginCheck = new PluginCheck("jobConfigHistory", "2.0");
 
-println(pluginCheck.isInstalled() ? "Is Installed" : "Not Installed")
+// println(pluginCheck.isInstalled() ? "Is Installed" : "Not Installed")
+
+if(!pluginCheck.isInstalled()){
+    pluginCheck.install();
+}
+else{
+    println(pluginCheck.isInstalled() ? "Installed" : "Not Installed")
+    println(pluginCheck.shortName());
+    println(pluginCheck.installedVersion())
+}
