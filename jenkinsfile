@@ -8,7 +8,8 @@ node {
             echo 'Building....'
             // sh 'dotnet --version'
             sh 'pwd'
-            sh 'rm -rf ConsoleApp1/'
+            sh 'rm -rf ConsoleApp1/bin'
+            sh 'rm -rf ConsoleApp1/obj'
             sh 'dotnet build ConsoleApp1'
             echo 'Building peter new feature'
             releasenotes(changes:"true")
